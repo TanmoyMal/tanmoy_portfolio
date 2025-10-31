@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/download-resume', (req, res) => {
-    const filePath = path.join(__dirname, 'public', 'TANMOY_MAL_Resume(Update).pdf');
-    res.download(filePath, 'Tanmoy_Resume.pdf');
+    const filePath = path.join(__dirname, 'public', 'Tanmoy_Updated_Resume_DA.pdf');
+    res.download(filePath, 'Tanmoy_Mal_Resume.pdf');
 });
 
 const PORT = process.env.PORT || 3000;

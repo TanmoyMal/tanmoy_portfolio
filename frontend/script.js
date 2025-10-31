@@ -1,10 +1,11 @@
 // Initialize Typed.js for typing effect
 
 var typed = new Typed('#element', {
-    strings: ['Coder', 'Full-Stack Developer', 'Python Developer'],
+    strings: ['Web Developer', 'Python Developer'],
     typeSpeed: 60,
     loop: true
 });
+
 
 
 
@@ -83,4 +84,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
+
+//  By default 6 Certificate 
+
+const showMoreBtn = document.getElementById('showMoreBtn');
+const certBoxes = document.querySelectorAll('.cert-info');
+let isExpanded = false;
+
+showMoreBtn.addEventListener('click', () => {
+    isExpanded = !isExpanded;
+    certBoxes.forEach((box, index) => {
+        if (index >= 6) {
+            box.style.display = isExpanded ? 'flex' : 'none';
+        }
+    });
+    showMoreBtn.textContent = isExpanded ? 'Show Less' : 'Show More';
+});
+
+
+
+
+// Certificate click to pop up
+
+const certImages = document.querySelectorAll('.cert-img img');
+const popup = document.getElementById('certPopup');
+const popupImg = document.getElementById('popupImg');
+const closeBtn = document.querySelector('.close-btn');
+
+// Show popup on image click
+certImages.forEach(img => {
+    img.addEventListener('click', () => {
+        popupImg.src = img.src;
+        popup.style.display = 'flex';
+    });
+});
+
+// Close popup on close button or background click
+closeBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
+popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+        popup.style.display = 'none';
+    }
+});
 
