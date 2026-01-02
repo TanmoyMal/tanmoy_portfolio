@@ -1,7 +1,7 @@
 // Initialize Typed.js for typing effect
 
 var typed = new Typed('#element', {
-    strings: ['Web Developer', 'Python Developer'],
+    strings: ['Web Developer', 'Data Analyst'],
     typeSpeed: 60,
     loop: true
 });

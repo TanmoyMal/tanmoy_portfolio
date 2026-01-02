@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to left, rgb(0, 0, 33), rgb(10, 10, 40));
+    background: linear-gradient(to left, rgb(0, 0, 47), rgb(6, 6, 24));
     color: white;
     font-family: "Open Sans", sans-serif;
 }
@@ -78,7 +78,7 @@ nav ul li a:hover::after {
     display: none;
 }
 
-/* ✅ Responsive Styling */
+/*  Responsive Styling */
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
@@ -127,6 +127,7 @@ nav ul li a:hover::after {
 .filo {
     color: #0ef;
 }
+
 
 
 /*    Home section   */
@@ -220,6 +221,7 @@ span {
     box-shadow: 0 0 15px #0ef;
 }
 
+
 /* ✅ Tablet Screens (≤ 992px) */
 @media (max-width: 992px) {
     .home {
@@ -271,7 +273,7 @@ span {
         width: 180px;
     }
 
-    #element{
+    #element {
         font-size: 1.29rem;
     }
 
@@ -282,6 +284,8 @@ span {
         margin: 20px 2px 20px 0;
     }
 }
+
+
 
 
 /*   About section   */
@@ -397,7 +401,7 @@ span {
 }
 
 .education>div:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, rgb(0, 0, 47), rgb(6, 6, 24));
     box-shadow: 0 0 15px rgb(121, 19, 216);
     transform: translateY(-5px);
 }
@@ -531,6 +535,8 @@ span {
 }
 
 
+
+
 /*  skills section  */
 
 .skills {
@@ -545,89 +551,91 @@ span {
     text-transform: uppercase;
 }
 
-.boxs {
+.main-box {
     display: grid;
-    grid-template-columns: repeat(4, 150px);
-    justify-content: center;
-    row-gap: 2.5rem;
-    column-gap: 4.5rem;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    max-width: 1150px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.boxs {
+    background: linear-gradient(to right, rgb(0, 0, 47), rgb(6, 6, 24));
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 15px rgb(121, 19, 216);
+}
+
+.box-heading {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 10px;
+    border-left: 4px solid #0ef;
 }
 
 .skill-box {
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    height: 140px;
-    width: 160px;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    flex-wrap: wrap;
+    gap: 15px;
 
-.skill-box:hover {
-    transform: scale(1.07);
-    box-shadow: 0 0 30px #0ef;
 }
 
 .skill-box img {
-    height: 125px;
-    width: 125px;
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+    background-color: rgba(217, 247, 255, 0.694);
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.skill-box img:hover {
+    transform: scale(0.9);
 }
 
 
-/* ✅ Tablet Screens (≤ 992px) */
-@media (max-width: 992px) {
-    .skills {
-        height: auto;
-        padding: 2rem 1rem;
-    }
+/*   Tablet  */
 
-    .boxs {
-        grid-template-columns: repeat(3, 150px);
-        /* now 3 per row */
-        column-gap: 2rem;
-        row-gap: 2rem;
-    }
-
-    .skill-box {
-        width: 150px;
-        height: 130px;
+@media (max-width: 900px) {
+    .main-box {
+        grid-template-columns: 1fr 1fr;
+        /* still 2 columns */
+        gap: 50px;
+        padding: 30px 20px;
     }
 
     .skill-box img {
-        width: 110px;
-        height: 110px;
-    }
-
-    .skill-heading {
-        font-size: 1.8rem;
-        margin-bottom: 40px;
+        width: 46px;
     }
 }
 
-/* ✅ Mobile Screens (≤ 576px) */
-@media (max-width: 576px) {
-    .boxs {
-        grid-template-columns: repeat(3, 100px);
-        /* still 3 per row */
-        gap: 1.2rem;
+/*  mobile  */
+
+@media (max-width: 600px) {
+    .main-box {
+        grid-template-columns: 1fr;
+        /* 1 box per row */
+        gap: 40px;
+        padding: 20px 15px;
     }
 
-    .skill-box {
-        width: 100px;
-        height: 100px;
+    .boxs {
+        padding: 20px;
+    }
+
+    .box-heading {
+        font-size: 1rem;
     }
 
     .skill-box img {
-        width: 75px;
-        height: 75px;
-    }
-
-    .skill-heading {
-        font-size: 1.4rem;
-        margin-bottom: 25px;
+        width: 42px;
+        padding: 6px;
     }
 }
 
@@ -1135,7 +1143,7 @@ span {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: rgb(121, 19, 216);
+    background-color: rgb(167, 72, 255);
     color: black;
     border: none;
     width: 50px;
@@ -1152,9 +1160,9 @@ span {
 
 .back-to-top:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 25px rgb(121, 19, 216);
+    box-shadow: 0 0 25px rgb(167, 72, 255);
     background-color: transparent;
-    color: rgb(121, 19, 216);
+    color: rgb(167, 72, 255);
 }
 
 /* 📱 Responsive */
